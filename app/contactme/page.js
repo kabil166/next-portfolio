@@ -40,9 +40,11 @@ const Contact = () => {
       
         if (res.ok) {
           const responseData = await res.json(); // Read the response data
+          setSubmitted(!submitted);
           toast.success(responseData.message); // Show success toast with the message from the server
         } else {
           const errorData = await res.json();
+          setSubmitted(false);
           toast.error(`Failed to send message: ${errorData.error}`);
         }
       };
@@ -53,7 +55,7 @@ const Contact = () => {
       {submitted ? (
         <div className={styles.thankYou}>
           <h2>Thank You!</h2>
-          <p>Your message has been sent. I'll get back to you soon!</p>
+          <p>Your message has been sent. I&apos;ll get back to you soon!</p>
         </div>
       ) : (
         <form className={styles.form} onSubmit={handleSubmit}>

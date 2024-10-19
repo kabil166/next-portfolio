@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Header from './components/Header'
 import styles from './styles/Home.module.css'
 import MyImage from './assets/images/noback.png'
 import ReciepeImage from './assets/images/recipeapp.png'
@@ -11,9 +10,9 @@ export default function Home() {
     <div className={styles.home_container}>
       <div className={styles.main_container}>
         <div className={styles.container}>
-          <h1 className={styles.title}>Hello, I'm Kabil!</h1>
+          <h1 className={styles.title}>Hello, I&apos;m Kabil!</h1>
           <p className={styles.description}>
-            I'm a software developer with expertise in React, JavaScript, and Spring Boot.
+            I&apos;m a software developer with expertise in React, JavaScript, and Spring Boot.
           </p>
           <a href="/projects">Check out my projects</a>
         </div>

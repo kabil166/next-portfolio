@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from '../styles/ServicesAndExpertise.module.css';
 import dynamic from 'next/dynamic';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, PointElement, LineElement } from 'chart.js';
@@ -74,6 +74,33 @@ const Services = () => {
                 },
               }}
             />
+            <Line
+            data={{
+              labels: ['2020', '2021', '2022', '2023'],  // Simulated years
+              datasets: [
+                {
+                  label: `${skill.skill} Progress`,
+                  data: [50, 60, 75, skill.percentage], // Simulated progress data
+                  backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                  borderColor: 'rgba(153, 102, 255, 1)',
+                  borderWidth: 2,
+                  fill: true,
+                  tension: 0.4,
+                }
+              ]
+            }}
+            options={{
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  max: 100,
+                }
+              },
+              plugins: {
+                legend: { display: false }
+              },
+            }}
+          />
           </div>
         ))}
         </div>
