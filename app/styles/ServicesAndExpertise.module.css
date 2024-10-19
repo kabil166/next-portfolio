@@ -1,0 +1,78 @@
+/* Default styles (for larger screens) */
+.container {
+    padding: 20px;
+    color: black;
+}
+
+.servicesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.serviceCard {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    flex: 1 1 calc(33% - 20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.serviceCard h2 {
+    color: #0070f3;
+    font-size: 1.5rem;
+}
+
+.expertiseContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.skillCard {
+    width: 150px;
+    text-align: center;
+    margin: 10px;
+    color: white;
+}
+
+.skillCard h3 {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .servicesContainer {
+        flex-direction: column; /* Stack service cards vertically */
+        align-items: center;    /* Center items in the column */
+    }
+
+    .serviceCard {
+        flex: 1 1 100%; /* Make service cards full-width */
+        margin: 10px 0; /* Adjust margin for spacing between cards */
+        padding: 15px;  /* Reduce padding slightly for better fit */
+    }
+
+    .serviceCard h2 {
+        font-size: 1.3rem; /* Slightly smaller font size for mobile */
+    }
+
+    .expertiseContainer {
+        flex-direction: column; /* Stack skill cards vertically */
+        align-items: center;    /* Center items on mobile */
+    }
+
+    .skillCard {
+        width: 100%; /* Full width for skill cards on mobile */
+        margin: 10px 0; /* Add margin between each card */
+        padding: 10px;
+    }
+
+    .skillCard h3 {
+        font-size: 0.9rem; /* Slightly smaller font for better fit */
+    }
+}

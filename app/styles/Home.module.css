@@ -1,0 +1,87 @@
+/* Default styles (for larger screens) */
+.main_container {
+    display: flex;
+    min-height: 400px;
+    justify-content: space-around;
+    border: 1px solid black;
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #0070f3;
+}
+
+.description {
+    max-width: 600px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #121111;
+    position: relative;
+    bottom: 50px;
+}
+
+.image_description {
+    max-width: 600px;
+}
+
+.name_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .main_container {
+      flex-direction: column;
+      align-items: center;
+      border: none; /* Remove border for cleaner mobile look */
+  }
+
+  .container {
+      padding: 15px;
+  }
+
+  .title {
+      font-size: 1.8rem; /* Reduce the font size for smaller screens */
+  }
+
+  .description {
+      font-size: 1.2rem; /* Slightly smaller font for mobile readability */
+      padding: 0 10px;   /* Add some padding to make it fit nicely */
+  }
+
+  .projects {
+      flex-direction: column; /* Stack the items vertically on mobile */
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+      bottom: 0; /* Remove offset for better alignment */
+  }
+
+  .image_description {
+      max-width: 100%; /* Make images or content take full width */
+      margin-bottom: 20px; /* Add space between items */
+  }
+
+  .name_description {
+      margin-bottom: 20px;
+      text-align: center;
+  }
+}
