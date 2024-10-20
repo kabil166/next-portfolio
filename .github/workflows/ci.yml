@@ -31,5 +31,6 @@ jobs:
         npm install
         npm run build
         sudo systemctl restart nginx
-        npm start
+        nohup npm start > app.log 2>&1 &
+        exit
         EOF
