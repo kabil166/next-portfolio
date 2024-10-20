@@ -26,7 +26,7 @@ jobs:
     - name: Deploy to EC2
       run: |
         ssh -o StrictHostKeyChecking=no ubuntu@13.202.151.231 << 'EOF'
-        cd /next-portfolio
+        cd next-portfolio
         git pull origin main
         npm install
         npm run build
