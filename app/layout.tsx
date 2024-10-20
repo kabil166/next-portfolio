@@ -58,6 +58,16 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <footer style={{ backgroundColor: '#f5f5f5', padding: '20px', textAlign: 'center' }}>
+  <p>© 2024 Kabil Hussain. All rights reserved.</p>
+  <p>
+    Built with <strong>Next.js</strong>, deployed on <strong>AWS EC2</strong>, and powered by <strong>AWS SES</strong> for email services.
+  </p>
+  <p>
+    <a href="https://www.linkedin.com/in/kabil-hussain-6a2724151/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a> |
+    <a href="mailto:kabilh89@gmail.com"> Email Me</a>
+  </p>
+</footer>
       </body>
     </html>
   );
