@@ -20,11 +20,11 @@ const Header = () => {
                     <b>Contact Me</b>
                 </NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
                 <NavLink href='/blogs'>
                     <b>Blogs</b>
                 </NavLink>
-            </NavItem>
+            </NavItem> */}
         </Nav>
         <hr/>
     </Navbar>
