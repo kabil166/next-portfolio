@@ -3,6 +3,7 @@ import styles from './styles/Home.module.css'
 import MyImage from './assets/images/noback.png'
 import ReciepeImage from './assets/images/recipeapp.png'
 import CalImage from './assets/images/calculatorapp.png'
+import Link from "next/link";
 
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
         </div>
       </div>
         <div className={styles.projects}>
-
+          <Link href={'https://my-recipe-68922.web.app'}>
           <div className={styles.image_description}>
             <div className={styles.name_description}>
             <b><h4>Reciepe Finder App</h4></b>
@@ -29,6 +30,10 @@ export default function Home() {
             </div>
             <p>Labore nisi consequat enim tempor.</p>
           </div>
+          </Link>
+          
+          <Link href={'https://kabil166.github.io/tip-calculator/'}>
+
           <div className={styles.image_description}>
             <div className={styles.name_description}>
             <b><h4>Reciepe Finder App</h4></b>
@@ -36,6 +41,7 @@ export default function Home() {
             </div>
             <p>Labore nisi consequat enim tempor.</p>
           </div>
+          </Link>
             {/* <Image src={CalImage} alt="alt" height={200} width={200} /> */}
         </div>
     </div>
