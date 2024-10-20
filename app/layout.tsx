@@ -29,22 +29,22 @@ export const metadata: Metadata = {
 };
 
  
-export const manifest: MetadataRoute.Manifest ={
-    name: 'Next.js App',
-    short_name: 'Next.js App',
-    description: 'Next.js App',
-    start_url: '/',
-    display: 'standalone',
-    background_color: '#fff',
-    theme_color: '#fff',
-    icons: [
-      {
-        src: '/favicon.ico',
-        sizes: 'any',
-        type: 'image/x-icon',
-      },
-    ],
-  }
+// export const manifest: MetadataRoute.Manifest ={
+//     name: 'Next.js App',
+//     short_name: 'Next.js App',
+//     description: 'Next.js App',
+//     start_url: '/',
+//     display: 'standalone',
+//     background_color: '#fff',
+//     theme_color: '#fff',
+//     icons: [
+//       {
+//         src: '/favicon.ico',
+//         sizes: 'any',
+//         type: 'image/x-icon',
+//       },
+//     ],
+//   }
 
 export default function RootLayout({
   children,
