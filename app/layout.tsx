@@ -58,7 +58,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
-        <footer style={{ backgroundColor: '#f5f5f5', padding: '20px', textAlign: 'center' }}>
+        <footer style={{ backgroundColor: '#f5f5f5', padding: '20px', textAlign: 'center', color:'#000000' }}>
   <p>© 2024 Kabil Hussain. All rights reserved.</p>
   <p>
     Built with <strong>Next.js</strong>, deployed on <strong>AWS EC2</strong>, and powered by <strong>AWS SES</strong> for email services.
