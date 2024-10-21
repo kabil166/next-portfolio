@@ -26,13 +26,24 @@ jobs:
     - name: Deploy to EC2
       run: |
         ssh -o StrictHostKeyChecking=no ubuntu@13.202.151.231 << 'EOF'
-        pkill node || true  # Stops the running Node.js process if it exists
         cd next-portfolio
         git pull origin main
         rm -rf .next
         npm install
         npm run build
+        
+        # Install PM2 if not already installed
+        pm2 --version || npm install -g pm2
+
+        # Stop the previous instance of the app
+        pm2 stop next-portfolio || true
+
+        # Start the app with PM2
+        pm2 start npm --name "next-portfolio" -- start
+
+        # Save the PM2 process list to restart after reboot
+        pm2 save
+
         sudo systemctl restart nginx
-        nohup npm start > app.log 2>&1 &
         exit
         EOF
